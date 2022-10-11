@@ -1,14 +1,142 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Название проекта</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/montserrat_regular.woff" as="font">
+    <link rel="preload" href="fonts/montserrat_regular.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat_bold.woff" as="font">
+    <link rel="preload" href="fonts/montserrat_bold.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat_semibold.woff" as="font">
+    <link rel="preload" href="fonts/montserrat_semibold.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat_medium.woff" as="font">
+    <link rel="preload" href="fonts/montserrat_medium.woff2" as="font">
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
-
+    <h1 class="visually-hidden">Интернет-магазин Drink2Go</h1>
+    <header class="header">
+      <a class="logo" href="">logo</a>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"></li>
+          <li class="navigation__item"></li>
+        </ul>
+        <button class="navigation__button" type="button"></button>
+      </nav>
+    </header>
+    <main class="unique-content">
+      <section class="slider">
+        <img class="slider__img" src="" alt="" width="" height="">
+        <span class="slider__text">Новинка!</span>
+        <h2 class="slider__title">Декаф Флэт Уайт</h2>
+        <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным 
+          фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+        </p>
+        <div class="slider__wrapper">
+          <span class="slider__old-price">295₽</span>
+          <span class="slider__price">225₽</span>
+        </div>
+        <button class="slider__button" type="button">Заказать</button>
+      </section>
+      <section class="advantages">
+        <span class="advantages__text">Преимущества</span>
+        <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle">Скорость</h3>
+            <p class="advantages__description">Готовый напиток всегда под рукой — просто открой банку</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle">Удобство</h3>
+            <p class="advantages__description">Легко помещается и в карман,
+              и в маленькую сумочку</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle">Бодрость</h3>
+            <p class="advantages__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__subtitle">Экологичность</h3>
+            <p class="advantages__description">Вся упаковка сделана
+              из перерабатываемых материалов</p>
+          </li>
+        </ul>
+      </section>
+      <section class="catalog">
+        <h2 class="catalog__title">Каталог кофейных напитков</h2>
+        <form class="catalog__form"></form>
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <img class="catalog__img" src="" alt="">
+            <h3 class="catalog__subtitle">Декаф Флэт Уайт</h3>
+            <p class="catalog__description">Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком</p>
+            <div class="catalog__wrapper">
+              <span class="catalog__price">225₽</span>
+              <button class="catalog__button" type="button">В корзину</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__img" src="" alt="">
+            <h3 class="catalog__subtitle">Декаф Флэт Уайт</h3>
+            <p class="catalog__description">Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком
+            </p>
+            <div class="catalog__wrapper">
+              <span class="catalog__price">225₽</span>
+              <button class="catalog__button" type="button">В корзину</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__img" src="" alt="">
+            <h3 class="catalog__subtitle"Декаф Флэт Уайт></h3>
+            <p class="catalog__description">Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком
+            </p>
+            <div class="catalog__wrapper">
+              <span class="catalog__price">225₽</span>
+              <button class="catalog__button" type="button">В корзину</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__img" src="" alt="">
+            <h3 class="catalog__subtitle">Декаф Флэт Уайт</h3>
+            <p class="catalog__description">Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком
+            </p>
+            <div class="catalog__wrapper">
+              <span class="catalog__price">225₽</span>
+              <button class="catalog__button" type="button">В корзину</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__img" src="" alt="">
+            <h3 class="catalog__subtitle">Декаф Флэт Уайт</h3>
+            <p class="catalog__description">Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком
+            </p>
+            <div class="catalog__wrapper">
+              <span class="catalog__price">225₽</span>
+              <button class="catalog__button" type="button">В корзину</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__img" src="" alt="">
+            <h3 class="catalog__subtitle">Декаф Флэт Уайт</h3>
+            <p class="catalog__description">Кофе без кофеина из Эфиопии
+              с натуральным фермерским молоком
+            </p>
+            <div class="catalog__wrapper">
+              <span class="catalog__price">225₽</span>
+              <button class="catalog__button" type="button">В корзину</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer"></footer>
     <script src="./js/script.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+.font400() {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+.font500() {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: 500;
+}
+
+.font600() {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: 600;
+}
+
+.font700() {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: 700;
+}
+
+.wrapper() {
+    width: 100%;
+    max-width: 320px;
+
+    @media (min-width:@tablet-width) {
+        max-width: 768px;
+    }
+
+    @media (min-width:@desktop-width) {
+        max-width: 1440px;
+    }
+}
+
+.text() {
+    .font700();
+    font-size: 12px;
+    line-height: 16px;
+    color: @color-violet;
+    text-transform: uppercase;
+}
