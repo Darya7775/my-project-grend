@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Название проекта</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/montserrat_regular.woff" as="font">
     <link rel="preload" href="fonts/montserrat_regular.woff2" as="font">
@@ -27,20 +28,68 @@
       </nav>
     </header>
     <main class="unique-content">
-      <section class="slider">
-        <div class="slider__wrap">
-          <img class="slider__img" src="" alt="" width="" height="">
-          <span class="slider__text">Новинка!</span>
-          <h2 class="slider__title">Декаф Флэт Уайт</h2>
-          <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным 
-            фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
-          </p>
-          <div class="slider__wrapper">
-            <span class="slider__old-price">295₽</span>
-            <span class="slider__price">225₽</span>
+      <section class="slider swiper">
+        <div class="slider__wrap swiper-wrapper">
+          <div class="swiper-slide slider__slide-wrapper">
+            <div class="slider__slide">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/flat_white_img_desktop.png 1x, img/flat_white_img_desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/flat_white_img_tablet.png 1x, img/flat_white_img_tablet@2x.png 2x">
+                <img class="slider__img" src="img/flat_white_img.png" srcset="img/flat_white_img@2x.png" alt="банка flat white" width="280" height="280">
+              </picture>
+              <span class="slider__text">Новинка!</span>
+              <h2 class="slider__title">Декаф Флэт Уайт</h2>
+              <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным 
+                фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+              </p>
+              <div class="slider__wrapper">
+                <span class="slider__old-price">295₽</span>
+                <span class="slider__price">225₽</span>
+              </div>
+              <button class="slider__button" type="button">Заказать</button>
           </div>
-          <button class="slider__button" type="button">Заказать</button>
+          </div>
+          <div class="swiper-slide slider__slide-wrapper slider__slide-wrapper_lavander">
+            <div class="slider__slide">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/lavender_img_desktop.png 1x, img/lavender_img_desktop2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/lavender_img_tablet.png 1x, img/lavender_img_tablet@2x.png 2x">
+                <img class="slider__img" src="img/lavender_img.png" srcset="img/lavender_img@2x.png" alt="банка lavender latte" width="280" height="280">
+              </picture>
+              <span class="slider__text">Новинка!</span>
+              <h2 class="slider__title">Лавандовый Латте</h2>
+              <p class="slider__description">Невероятное сочетание перуанской высокогорной арабики с 
+                молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+              </p>
+              <div class="slider__wrapper">
+                <span class="slider__old-price">285₽</span>
+                <span class="slider__price">265₽</span>
+              </div>
+              <button class="slider__button" type="button">Заказать</button>
         </div>
+          </div>
+          <div class="swiper-slide slider__slide-wrapper">
+            <div class="slider__slide">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/espresso_img_desktop.png 1x, img/espresso_img_desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/espresso_img_tablet.png 1x, img/espresso_img_tablet@2x.png 2x">
+                <img class="slider__img" src="img/espresso_img.png" srcset="img/espresso_img@2x.png" alt="банка triple espresso" width="280" height="280">
+              </picture>
+              <span class="slider__text">Новинка!</span>
+              <h2 class="slider__title">Тройной Эспрессо</h2>
+              <p class="slider__description">Мощнее укола адреналина, чернее самой тёмной ночи, 
+                этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+              </p>
+              <div class="slider__wrapper">
+                <span class="slider__old-price">395₽</span>
+                <span class="slider__price">375₽</span>
+              </div>
+              <button class="slider__button" type="button">Заказать</button>
+        </div>
+          </div>
+        </div>
+        <button class="slider__button-prev swiper-button-prev"></button>
+        <button class="slider__button-next swiper-button-next"></button>
       </section>
       <section class="advantages">
         <span class="advantages__text">Преимущества</span>
@@ -86,20 +135,28 @@
               <legend class="form__title">Наличие молока</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <label class="form__label" for="no-matter">Неважно</label>
-                  <input class="form__input" type="radio" id="no-matter" name="молоко" value="Неважно">
+                  <label class="form__label form__label_mark">Неважно
+                    <input class="form__input-radio visually-hidden" type="radio" name="молоко" value="Неважно" checked>
+                    <span class="form__label-mark"></span>
+                  </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label" for="animal-only">Только животное</label>
-                  <input class="form__input" type="radio" id="animal-only" name="молоко" value="Только животное">
+                  <label class="form__label form__label_mark">Только животное
+                    <input class="form__input-radio visually-hidden" type="radio"  name="молоко" value="Только животное">
+                    <span class="form__label-mark"></span>
+                  </label> 
                 </li>
                 <li class="form__item">
-                  <label class="form__label" for="only-vegetable">Только растительное</label>
-                  <input class="form__input" type="radio" id="only-vegetable" name="молоко" value="Только растительное"> 
+                  <label class="form__label form__label_mark">Только растительное
+                    <input class="form__input-radio visually-hidden" type="radio" name="молоко" value="Только растительное">
+                    <span class="form__label-mark"></span> 
+                  </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label" for="without-milk">Без молока</label>
-                  <input class="form__input" type="radio" id="without-milk" name="молоко" value="Без молока">
+                  <label class="form__label form__label_mark">Без молока
+                    <input class="form__input-radio visually-hidden" type="radio" name="молоко" value="Без молока">
+                    <span class="form__label-mark"></span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -107,24 +164,34 @@
               <legend class="form__title">Страна произрастания</legend>
               <ul class="form__list">
                 <li class="form__item">
-                  <label class="form__label" for="brazil">Бразилия</label>
-                  <input class="form__input" type="checkbox" id="brazil" name="Бразилия">
+                  <label class="form__label form__label_marker">Бразилия
+                    <input class="form__input-checkbox visually-hidden" type="checkbox" name="Бразилия" checked>
+                    <span class="form__label-mark"></span>
+                  </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label" for="ethiopia">Эфиопия</label>
-                  <input class="form__input" type="checkbox" id="ethiopia" name="Эфиопия">
+                  <label class="form__label form__label_marker" for="ethiopia">Эфиопия
+                    <input class="form__input-checkbox visually-hidden" type="checkbox" id="ethiopia" name="Эфиопия">
+                    <span class="form__label-mark"></span>
+                  </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label" for="colombia">Колумбия</label>
-                  <input class="form__input" type="checkbox" id="colombia" name="Колумбия">
+                  <label class="form__label form__label_marker" for="colombia">Колумбия
+                    <input class="form__input-checkbox visually-hidden" type="checkbox" id="colombia" name="Колумбия">
+                    <span class="form__label-mark"></span>
+                  </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label" for="costa-rica">Коста-Рика</label>
-                  <input class="form__input" type="checkbox" id="costa-rica" name="Коста-Рика">
+                  <label class="form__label form__label_marker" for="costa-rica">Коста-Рика
+                    <input class="form__input-checkbox visually-hidden" type="checkbox" id="costa-rica" name="Коста-Рика">
+                    <span class="form__label-mark"></span>
+                  </label>
                 </li>
                 <li class="form__item">
-                  <label class="form__label" for="peru">Перу</label>
-                  <input class="form__input" type="checkbox" id="peru" name="Перу">
+                  <label class="form__label form__label_marker" for="peru">Перу
+                    <input class="form__input-checkbox visually-hidden" type="checkbox" id="peru" name="Перу">
+                    <span class="form__label-mark"></span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -313,5 +380,14 @@
       </div>
     </footer>
     <script src="./js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>

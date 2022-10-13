@@ -2,14 +2,54 @@
     width: 100%;
     background-color: #F3EBE1;
     color: #333333;
+    position: relative;
+}
+
+.slider__wrap {
+    .wrapper();
+    margin: 0 auto;
+}
+
+.slider__slide-wrapper {
+    width: 100%;
+    margin: 0 auto;
+
+    &_lavander {
+        background-color: #EAE6FC;
+    }
+}
+
+.slider__slide {
+    .wrapper();
+    padding: 20px 20px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.slider__wrap {
-    .wrapper();
-    padding: 20px 20px 60px;
+.slider__button-prev {
+    background-image: url('../img/slider-right.svg');
+}
+
+.slider__button-prev,
+.slider__button-next {
+    position: absolute;
+    border: none;
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 20px;
+    z-index: 2;
+    background-color: #F3EBE1;
+    cursor: pointer;
+}
+
+.slider__button-next {
+    background-image: url('../img/slider-left.svg');
+}
+
+.slider__button-prev::after,  
+.slider__button-next::after {
+    content: '';
 }
 
 // .slider__img {
@@ -26,6 +66,7 @@
     line-height: 48px;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .slider__description {
@@ -34,6 +75,7 @@
     line-height: 20px;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .slider__old-price {
