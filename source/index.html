@@ -18,14 +18,56 @@
   <body class="page__body">
     <h1 class="visually-hidden">Интернет-магазин Drink2Go</h1>
     <header class="header">
-      <a class="logo" href="">logo</a>
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item"></li>
-          <li class="navigation__item"></li>
-        </ul>
-        <button class="navigation__button" type="button"></button>
-      </nav>
+      <div class="header__wrapper">
+        <div class="header__wrap">
+          <a class="header__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo_desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo_tablet.svg">
+              <img src="img/logo.svg" width="32" header="36" alt="логотип интернет-магазина Drink2Go">
+            </picture>
+          </a>
+          <p class="header__text">Интернет-магазин кофейных напитков</p>
+        </div>
+        <nav class="navigation">
+          <ul class="navigation__list-navigation navigation__list-navigation_closed navigation__list-navigation_nojs">
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link_active" href="#">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Каталог</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Доставка</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">О нас</a>
+            </li>
+          </ul>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                <svg class="navigation__icon" width="16" height="16" viewport="0 0 16 16" area-label="вход в личный кабинет">
+                  <use href="img/sprite.svg#user"></use>
+                </svg>
+                <span class="navigation__text">Войти</span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                <svg class="navigation__icon" width="16" height="16" viewport="0 0 16 16" area-label="корзина">
+                  <use href="img/sprite.svg#basket"></use>
+                </svg>
+                <span class="navigation__text">Корзина</span>
+              </a>
+            </li>
+          </ul>
+          <button class="navigation__button" type="button">
+            <span class="visually-hidden">Меню</span>
+            <span class="navigation__button-row"></span>
+          </button>
+        </nav>
+      </div>
     </header>
     <main class="unique-content">
       <section class="slider swiper">
@@ -95,19 +137,19 @@
         <span class="advantages__text">Преимущества</span>
         <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
         <ul class="advantages__list">
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item_clock">
             <h3 class="advantages__subtitle">Скорость</h3>
             <p class="advantages__description">Готовый напиток всегда под рукой — просто открой банку</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item_pocket">
             <h3 class="advantages__subtitle">Удобство</h3>
             <p class="advantages__description">Легко помещается и в карман, <br> и в маленькую сумочку</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item_lightning">
             <h3 class="advantages__subtitle">Бодрость</h3>
             <p class="advantages__description">Сбалансированная доза кофеина <br> даст мощный заряд энергии</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item_list">
             <h3 class="advantages__subtitle">Экологичность</h3>
             <p class="advantages__description">Вся упаковка сделана <br> из перерабатываемых материалов</p>
           </li>
@@ -120,10 +162,14 @@
           <form class="catalog__form form" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="form__fieldset">
               <legend class="form__title">Цена</legend>
+              <div class="form__toglle"></div>
               <ul class="form__list-price">
                 <li>
                   <label class="visually-hidden" for="min">Минимальная цена</label>
                   <input class="form__input-price" placeholder="0" type="text" id="min" name="Минимальная цена" required>
+                </li>
+                <li>
+                  <span class="form__hyphen"></span>
                 </li>
                 <li>
                   <label class="visually-hidden" for="max">Максимальная цена</label>
@@ -195,11 +241,11 @@
                 </li>
               </ul>
             </fieldset>
-            <button type="submit">Применить фильтр</button>
-            <button type="reset">Сбросить фильтр</button>
+            <button class="form__button form__button_submit" type="submit">Применить фильтр</button>
+            <button class="form__button form__button_reset" type="reset">Сбросить фильтр</button>
             <fieldset class="form__fieldset">
-              <legend class="form__title">Сортировка:</legend>
-              <select class="" name="sorting" id="sorting">
+              <h3 class="form__title form__title_sorting">Сортировка:</h3>
+              <select class="form__select" name="sorting" id="sorting">
                 <option class="" value="по умолчанию">по умолчанию</option>
               </select>
             </fieldset>

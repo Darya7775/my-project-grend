@@ -14,6 +14,43 @@
     font-size: 16px;
     line-height: 24px;
     padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.form__title_sorting {
+    margin: 0;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.form__toglle {
+    margin: 11px 0 35px;
+    width: 280px;
+    height: 2px;
+    background: linear-gradient(to right, #9070EC 241px, #E2E2E2 39px);
+    position: relative;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-color: @base-bg-color;
+        border-radius: 50%;
+        border: 2px solid #9070EC;
+    }
+
+    &::after {
+        top: -12px;
+        left: 0;
+    }
+
+    &::before {
+        top: -12px;
+        left: 241px;
+    }
 }
 
 .form__list-price {
@@ -21,7 +58,7 @@
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 44px;
+    gap: 17px;
 }
 
 .form__input-price {
@@ -31,10 +68,20 @@
     padding: 7px 10px;
 }
 
+.form__hyphen {
+    display: inline-block;
+    width: 9px;
+    height: 2px;
+    background-color: #BDBDBD;
+}
+
 .form__list {
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .form__item {
@@ -77,6 +124,16 @@
     }
 }
 
+.form__input-radio:focus + .form__label-mark,
+.form__input-radio:hover + .form__label-mark {
+    border: 2px solid #9070EC;
+}
+
+.form__input-radio:focus + .form__label-mark::before,
+.form__input-radio:hover + .form__label-mark::before  {
+        background-color: rgba(120, 89, 207, 0.25);
+}
+
 .form__label_marker {
     padding-left: 52px;
     position: relative;
@@ -113,4 +170,42 @@
     &::before {
         left: 20px;
     }
+}
+
+.form__input-checkbox:focus + .form__label-mark,
+.form__input-checkbox:hover + .form__label-mark {
+    outline: 2px solid #9070EC;
+    background-color: rgba(120, 89, 207, 0.25);
+}
+
+.form__button {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    padding: 10px 12px;
+    font-size: 13px;
+    line-height: 24px;
+    .font400();
+    border: none;
+    border-radius: 4px;
+}
+
+.form__button_submit {
+    background-color: @color-violet;
+    color: @base-bg-color;
+    margin-bottom: 24px;
+}
+
+.form__button_reset {
+    background-color: @base-bg-color;
+    color: @color-violet;
+}
+
+.form__select {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 24px;
+    .font600();
+    color: @color-violet;
 }
