@@ -72,7 +72,7 @@
     <main class="unique-content">
       <section class="slider swiper">
         <div class="slider__wrap swiper-wrapper">
-          <div class="swiper-slide slider__slide-wrapper">
+          <div class="swiper-slide slider__slide-wrapper slider__slide-wrapper_beige">
             <div class="slider__slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/flat_white_img_desktop.png 1x, img/flat_white_img_desktop@2x.png 2x">
@@ -85,11 +85,13 @@
                 фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
               </p>
               <div class="slider__wrapper">
-                <span class="slider__old-price">295₽</span>
-                <span class="slider__price">225₽</span>
+                <div>
+                  <span class="slider__old-price">295₽</span>
+                  <span class="slider__price">225₽</span>
+                </div>  
+                <button class="slider__button" type="button">Заказать</button>
               </div>
-              <button class="slider__button" type="button">Заказать</button>
-          </div>
+            </div>
           </div>
           <div class="swiper-slide slider__slide-wrapper slider__slide-wrapper_lavander">
             <div class="slider__slide">
@@ -104,13 +106,15 @@
                 молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
               </p>
               <div class="slider__wrapper">
-                <span class="slider__old-price">285₽</span>
+                <div>
+                  <span class="slider__old-price">285₽</span>
                 <span class="slider__price">265₽</span>
+                </div>
+                <button class="slider__button" type="button">Заказать</button>
               </div>
-              <button class="slider__button" type="button">Заказать</button>
-        </div>
+            </div>
           </div>
-          <div class="swiper-slide slider__slide-wrapper">
+          <div class="swiper-slide slider__slide-wrapper slider__slide-wrapper_grey">
             <div class="slider__slide">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/espresso_img_desktop.png 1x, img/espresso_img_desktop@2x.png 2x">
@@ -123,15 +127,18 @@
                 этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
               </p>
               <div class="slider__wrapper">
-                <span class="slider__old-price">395₽</span>
+                <div>
+                  <span class="slider__old-price">395₽</span>
                 <span class="slider__price">375₽</span>
+                </div>
+                <button class="slider__button" type="button">Заказать</button>
               </div>
-              <button class="slider__button" type="button">Заказать</button>
-        </div>
+            </div>
           </div>
         </div>
         <button class="slider__button-prev swiper-button-prev"></button>
         <button class="slider__button-next swiper-button-next"></button>
+        <div class="slider__pagination swiper-pagination">
       </section>
       <section class="advantages">
         <span class="advantages__text">Преимущества</span>
@@ -159,7 +166,7 @@
         <div class="catalog__wrap">
           <span class="catalog__text">Каталог</span>
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
-          <form class="catalog__form form" method="get" action="https://echo.htmlacademy.ru">
+          <form class="catalog__form form" method="get" action="https://echo.htmlacademy.ru" id="form">
             <fieldset class="form__fieldset">
               <legend class="form__title">Цена</legend>
               <div class="form__toglle"></div>
@@ -243,13 +250,24 @@
             </fieldset>
             <button class="form__button form__button_submit" type="submit">Применить фильтр</button>
             <button class="form__button form__button_reset" type="reset">Сбросить фильтр</button>
-            <fieldset class="form__fieldset">
-              <h3 class="form__title form__title_sorting">Сортировка:</h3>
-              <select class="form__select" name="sorting" id="sorting">
-                <option class="" value="по умолчанию">по умолчанию</option>
-              </select>
-            </fieldset>
           </form>
+          <div>
+            <h3 class="form__title form__title-sorting">Сортировка:</h3>
+            <div class="form__wrapper" data-state="">
+              <div class="form__select-title" data-default="по умолчанию" tabindex="0">по умолчанию</div>
+              <div class="form__select">
+                <input class="form__select-input visually-hidden" type="radio" name="сортировка" value="по умолчанию" id="def" form="form" checked>
+                <label class="form__select-label" for="def" tabindex="0">по умолчанию</label>
+                <input class="form__select-input visually-hidden" type="radio" name="сортировка" value="сначала дорогие" id="rich" form="form">
+                <label class="form__select-label" for="rich" tabindex="0">сначала дорогие</label>
+                <input class="form__select-input visually-hidden" type="radio" name="сортировка" value="сначала дешёвые" id="poor" form="form">
+                <label class="form__select-label" for="poor" tabindex="0">сначала дешёвые</label>
+                <input class="form__select-input visually-hidden" type="radio" name="сортировка" value="высокий рейтинг" id="the best" form="form">
+                <label class="form__select-label" for="the best" tabindex="0">высокий рейтинг</label>
+              </div>
+            </div>
+          </div>
+        </div>
           <ul class="catalog__list">
             <li class="catalog__item">
               <a class="catalog__link" href="#">
@@ -432,6 +450,11 @@
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
       });
     </script>
