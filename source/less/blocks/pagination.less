@@ -1,9 +1,16 @@
 .pagination {
+    .wrapper();
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 44px;
+    padding: 0 20px;
+
+    @media (min-width:@tablet-width) {
+        justify-content: flex-end;
+        padding: 0;
+        margin-bottom: 90px;
+    }
 }
 
 .pagination__button {
@@ -23,5 +30,65 @@
         background-color: #F8F8F8;
         color: #333333;
         .font600();
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #9070EC;
+        color: @base-bg-color;
+    }
+
+    &:active {
+        background-color: #593CAC;
+        color: @base-bg-color;
+    }
+
+    &:disabled {
+        background-color: #E2E2E2;
+        color: @base-bg-color;
+    }
+
+    @media (min-width:@tablet-width) {
+        border-radius: 0;
+    }
+}
+
+.pagination__button_prev {
+    background-image: url('../img/slider-right.svg');
+    background-position: 12px 10px;
+    background-repeat: no-repeat;
+
+    @media (min-width:@tablet-width) {
+        background-image: none;
+        width: 140px;
+        padding: 8px 43px 8px 52px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+
+        &::after {
+            content: 'Назад';
+            line-height: 24px;
+            cursor: pointer;
+        }
+    }
+}
+
+.pagination__button_next {
+    background-image: url('../img/slider-left.svg');
+    background-repeat: no-repeat;
+    background-position: 16px 10px;
+
+    @media (min-width:@tablet-width) {
+        background-image: none;
+        width: 140px;
+        padding: 8px 47px 8px 37px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+
+        &::after {
+            content: 'Вперед';
+            line-height: 24px;
+            cursor: pointer;
+        }
     }
 }

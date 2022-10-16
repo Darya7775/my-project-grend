@@ -5,9 +5,38 @@
     color: #BDBDBD;
     font-size: 12px;
     line-height: 16px;
+
+    @media (min-width:@tablet-width) {
+        text-align: center;
+        grid-column: 1/-1;
+        border-top: none;
+    }
 }
 
 .htmlacademy__link {
     text-decoration: none;
     color: #BDBDBD;
+
+    &:hover,
+    &:focus {
+        color: @color-violet;
+    }
+
+    &:active {
+        color: #593CAC;
+    }
+}
+
+.htmlacademy__icon {
+    fill: #BDBDBD;
+    vertical-align: bottom;
+}
+
+.htmlacademy__link:hover .htmlacademy__icon,
+.htmlacademy__link:focus .htmlacademy__icon {
+    fill: @color-violet;
+}
+
+.htmlacademy__link:active .htmlacademy__icon {
+    fill: #593CAC;
 }

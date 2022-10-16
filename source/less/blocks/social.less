@@ -2,6 +2,26 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
+    gap: 39px;
+    align-items: center;
     margin: 0;
     padding: 0;
+
+    @media (min-width:@desktop-width) {
+        justify-content: flex-start;
+    }
+
+}
+
+.social__icon {
+    fill: #BDBDBD;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+    fill: @color-violet;
+}
+
+.social__link:active .social__icon {
+    fill: #593CAC;
 }
