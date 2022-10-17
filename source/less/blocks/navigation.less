@@ -19,6 +19,11 @@
     list-style: none;
     margin: 0;
     padding: 0;
+
+    @media (min-width:@desktop-width) {
+      width: 261px;
+      gap: 20px;
+  }
 }
 
 .navigation__link {
@@ -80,6 +85,10 @@
     padding: 0;
     margin: 0;
     list-style: none;
+
+    @media (min-width: @desktop-width) {
+      width: 460px;
+    }
 }
 
 .navigation__list-navigation .navigation__item {
@@ -96,6 +105,7 @@
     font-size: 12px;
     line-height: 16px;
     text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
 .navigation__link_active {
@@ -127,6 +137,7 @@
   
     @media (min-width: @desktop-width) {
       background-color: transparent;
+      gap: 20px;
     }
   }
   
